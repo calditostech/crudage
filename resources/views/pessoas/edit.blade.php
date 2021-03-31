@@ -15,8 +15,8 @@
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
-                        <span>@lang('Editar (Pessoa CRUD Laravel) - i9W3b')</span>
-                        <a href="{{ url('coronas') }}" class="btn-info btn-sm">
+                        <span>@lang('Editar (Pessoa CRUD Laravel)')</span>
+                        <a href="{{ url('pessoas') }}" class="btn-info btn-sm">
                             <i class="fa fa-arrow-left"></i> @lang('Voltar')
                         </a>
                     </div>
@@ -28,7 +28,7 @@
                     </div>
                     @endif
 
-                    {!! Form::open(['action' => ['PessoaController@update',$pessoas->id], 'method' => 'PUT'])!!}
+                    {!! Form::open(['action' => ['App\Http\Controllers\PessoaController@update',$pessoas->id], 'method' => 'PUT'])!!}
 
                     <div class="form-group">
                         {!! Form::label(__('Nome :')) !!}
@@ -37,12 +37,12 @@
 
                     <div class="form-group">
                         {!! Form::label(__('Email :')) !!}
-                        {!! Form::text("email", $pessoas->email ,["id" => "email", "class"=>"form-control mmss","required"=>"required"]) !!}
+                        {!! Form::email("email", $pessoas->email ,["id" => "email", "class"=>"form-control","required"=>"required"]) !!}
                     </div>
 
                     <div class="form-group">
                         {!! Form::label(__('Cpf :')) !!}
-                        {!! Form::text("cpf", $pessoas->cpf ,["id" => "cpf", "class"=>"form-control mmss","required"=>"required"]) !!}
+                        {!! Form::text("cpf", $pessoas->cpf ,["id" => "cpf", "class"=>"form-control","required"=>"required"]) !!}
                     </div>
 
                     <div class="well well-sm clearfix">

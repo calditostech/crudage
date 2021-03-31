@@ -41,7 +41,7 @@ class PessoaController extends Controller
             'email' => 'required',
             'cpf' => 'required|numeric',
         ]);
-        $show = Pessoa::create($validatedData);
+        $pessoas = Pessoa::create($validatedData);
         return redirect('/pessoas')->with('successo', 'Dados adicionado com sucesso!');
     }
 

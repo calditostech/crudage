@@ -4,7 +4,7 @@
 
 @push('css')
 <style>
-    /* Personalizar layout*/
+
 </style>
 @endpush
 
@@ -15,7 +15,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
-                        <span>@lang('Criar (Pessoa CRUD Laravel) - i9W3b')</span>
+                        <span>@lang('Criar (Pessoa CRUD Laravel)')</span>
                         <a href="{{ url('pessoas') }}" class="btn-info btn-sm">
                             <i class="fa fa-arrow-left"></i> @lang('Voltar')
                         </a>
@@ -28,7 +28,7 @@
                     </div>
                     @endif
 
-                    {!! Form::open(['action' =>'PessoaController@store', 'method' => 'POST'])!!}
+                    {!! Form::open(['action' =>'App\Http\Controllers\PessoaController@store', 'method' => 'POST'])!!}
 
                     <div class="form-group">
                         {!! Form::label(__('Nome :')) !!}
@@ -37,12 +37,12 @@
 
                     <div class="form-group">
                         {!! Form::label(__('Email:')) !!}
-                        {!! Form::text("email", null ,["id" => "email", "class"=>"form-control mmss","required"=>"required"]) !!}
+                        {!! Form::email("email", null ,["id" => "email", "class"=>"form-control","required"=>"required"]) !!}
                     </div>
 
                     <div class="form-group">
                         {!! Form::label(__('Cpf :')) !!}
-                        {!! Form::text("cpf", null ,["id" => "cpf", "class"=>"form-control mmss","required"=>"required"]) !!}
+                        {!! Form::text("cpf", null ,["id" => "cpf", "class"=>"form-control","required"=>"required"]) !!}
                     </div>
 
                     <div class="well well-sm clearfix">

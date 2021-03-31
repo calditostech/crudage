@@ -4,7 +4,7 @@
 
 @push('css')
 <style>
-    /* Personalizar layout*/
+
 </style>
 @endpush
 
@@ -15,7 +15,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
-                        <span>@lang('Pessoa (CRUD Laravel) - i9W3b')</span>
+                        <span>@lang('Pessoa (CRUD Laravel)')</span>
                         <a href="{{ url('pessoas/create') }}" class="btn-primary btn-sm">
                             <i class="fa fa-plus"></i> @lang('Criar Novo')
                         </a>
