@@ -15,10 +15,6 @@ use App\Http\Controllers\PessoaController;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::middleware('api')->group(function () {
-    Route::resource('pessoas', PessoaController::class);
+    Route::resource('usuarios', PessoaController::class);
 });
